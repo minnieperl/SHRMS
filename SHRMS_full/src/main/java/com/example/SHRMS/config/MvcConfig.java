@@ -10,7 +10,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
-@EnableWebMvc
 public class MvcConfig implements WebMvcConfigurer {
 
     @Value("${app.upload.dir:uploads}")
