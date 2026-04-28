@@ -1,7 +1,5 @@
 package com.example.SHRMS.controller;
 
-import com.example.SHRMS.config.SessionHelper;
-import com.example.SHRMS.model.Employee;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequiredArgsConstructor
 public class AuthController {
-
-    private final SessionHelper sessionHelper;
 
     @GetMapping("/login")
     public String loginPage(@RequestParam(required = false) String error,
@@ -29,5 +25,4 @@ public class AuthController {
     public String root() {
         return "redirect:/dashboard";
     }
-
-    }
+}
