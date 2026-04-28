@@ -52,7 +52,7 @@ public class SecurityConfig {
             )
             .formLogin(form -> form
                 .loginPage("/login")
-                .loginProcessingUrl("/login")
+                .loginProcessingUrl("/login-process")
                 .usernameParameter("email")
                 .passwordParameter("password")
                 .defaultSuccessUrl("/dashboard", true)

@@ -26,7 +26,7 @@
       </div>
     </c:if>
 
-    <form method="POST" action="${pageContext.request.contextPath}/login">
+    <form method="POST" action="${pageContext.request.contextPath}/login-process">
       <div class="form-group">
         <label class="form-label">Email Address</label>
         <div style="position:relative;">
