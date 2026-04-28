@@ -2,7 +2,6 @@ package com.example.SHRMS.controller;
 
 import com.example.SHRMS.config.SessionHelper;
 import com.example.SHRMS.model.Employee;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,14 +30,4 @@ public class AuthController {
         return "redirect:/dashboard";
     }
 
-    @GetMapping("/dashboard")
-    public String dashboard(Model model, HttpSession session) {
-        Employee emp = sessionHelper.getCurrentEmployee();
-        if (emp == null) return "redirect:/login";
-        session.setAttribute("loggedEmployee", emp);
-        session.setAttribute("loggedRole", emp.getRole().getRoleName());
-        model.addAttribute("employee", emp);
-        model.addAttribute("role", emp.getRole().getRoleName());
-        return "dashboard/dashboard";
     }
-}
