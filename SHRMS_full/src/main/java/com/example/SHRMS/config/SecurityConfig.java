@@ -35,7 +35,7 @@ public class SecurityConfig {
             .userDetailsService(userDetailsService)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/css/**", "/js/**", "/images/**", "/uploads/**", "/webjars/**").permitAll()
-                .requestMatchers("/login", "/login-error").permitAll()
+                .requestMatchers("/login", "/login-process", "/login-error").permitAll()
 
                 // Admin only
                 .requestMatchers("/employees/add", "/employees/edit/**", "/employees/delete/**").hasRole("ADMIN")
